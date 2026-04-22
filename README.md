@@ -49,7 +49,7 @@ Assets/_Project/
 
 ### Setup
 1. Clone the repository.
-2. Follow the detailed [SETUP_GUIDE.md](Assets/_Project/Documentation/SETUP_GUIDE.md) for scene-specific hierarchy instructions.
+2. Follow the detailed [SETUP_GUIDE.md](Assets/_Project/Documentation/SETUP_GUIDE.md) for hierarchy instructions and the [ARCH_SET_GUIDE.md](Assets/_Project/Documentation/ARCH_SET_GUIDE.md) for full project architecture.
 3. Import DOTween and run its setup utility (`Tools > DOTween Utility Panel`).
 4. Build to a supported AR device.
 
