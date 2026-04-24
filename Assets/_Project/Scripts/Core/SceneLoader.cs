@@ -14,16 +14,27 @@ namespace Reactor.Core
 
         private void Awake()
         {
-            if (_instance != null)
+            if (_instance != null && _instance != this)
             {
                 Destroy(gameObject);
                 return;
             }
             _instance = this;
-            DontDestroyOnLoad(gameObject);
+            // Must use root GO since this is a child of [GLOBAL_SYSTEMS]
+            DontDestroyOnLoad(transform.root.gameObject);
             
             if (loadingOverlay != null)
                 loadingOverlay.alpha = 0;
+
+            ServiceLocator.Register<SceneLoader>(this);
+        }
+
+        private void OnDestroy()
+        {
+            if (_instance == this)
+            {
+                ServiceLocator.Unregister<SceneLoader>();
+            }
         }
 
         public static void Load(string sceneName)
