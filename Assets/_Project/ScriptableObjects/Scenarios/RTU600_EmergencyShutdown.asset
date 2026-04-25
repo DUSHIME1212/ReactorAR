@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492afcd339559c54da5e341b5c5e67ef, type: 3}
   m_Name: RTU600_EmergencyShutdown
   m_EditorClassIdentifier: Assembly-CSharp::Reactor.Data.TrainingScenario
-  scenarioTitle: 
-  scenarioSubtitle: 
+  scenarioTitle: 'Emegency exit '
+  scenarioSubtitle: Emegency exit dscription
   steps:
-  - stepLabel: 
+  - stepLabel: 1
     modelPrefab: {fileID: 0}
     telemetry:
     - label: 
