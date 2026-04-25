@@ -29,6 +29,9 @@ namespace Reactor.Training
 
     void Start()
     {
+        if (scenario == null)
+            scenario = ScenarioLoader.ActiveScenario;
+
         nextBtn.onClick.AddListener(AdvanceStep);
 
         // Slide instruction panel in from top

@@ -206,6 +206,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2927766826809738153, guid: 237a9f78515b27f4a86bf127d08e1357, type: 3}
+      propertyPath: m_Color.a
+      value: 0.45882353
+      objectReference: {fileID: 0}
     - target: {fileID: 4120583098763108348, guid: 237a9f78515b27f4a86bf127d08e1357, type: 3}
       propertyPath: useScreenTimeout
       value: 1

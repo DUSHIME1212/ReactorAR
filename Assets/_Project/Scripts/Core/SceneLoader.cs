@@ -39,7 +39,15 @@ namespace Reactor.Core
 
         public static void Load(string sceneName)
         {
-            _instance.StartCoroutine(_instance.LoadRoutine(sceneName));
+            if (_instance != null)
+            {
+                _instance.StartCoroutine(_instance.LoadRoutine(sceneName));
+            }
+            else
+            {
+                Debug.LogWarning($"[SceneLoader] No instance found! Falling back to direct load for: {sceneName}. Make sure [GLOBAL_SYSTEMS] is in your scene.");
+                SceneManager.LoadScene(sceneName);
+            }
         }
 
         private IEnumerator LoadRoutine(string sceneName)
